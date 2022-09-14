@@ -9,6 +9,7 @@ public class TicTacToe {
         char player1Letter = ' ';
         char player2Letter = ' ';
         createBoard(board);
+        showBoard(board);
 
         player1Letter = chooseLetter();
         player2Letter = (player1Letter == 'x') ? 'o' : 'x';
@@ -28,4 +29,10 @@ public class TicTacToe {
         System.out.println("Choose Letter X or O");
         return sc.next().charAt(0);
     }
-}
+    static void showBoard(char[]board){
+            System.out.println(board[1] + " | " + board[2] + " | " + board[3]);
+            System.out.println(board[4] + " | " + board[5] + " | " + board[6]);
+            System.out.println(board[7] + " | " + board[8] + " | " + board[9]);
+        }
+    }
+
