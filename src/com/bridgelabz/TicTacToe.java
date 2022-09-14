@@ -12,7 +12,7 @@ public class TicTacToe {
         showBoard(board);
 
         player1Letter = chooseLetter();
-        player2Letter = (player1Letter == 'x') ? 'o' : 'x';
+        player2Letter = (player1Letter == 'X') ? 'O' : 'X';
 
         System.out.println("Player 1 Letter is: " + player1Letter);
         System.out.println("Player 2 Letter is: " + player2Letter);
@@ -27,7 +27,7 @@ public class TicTacToe {
     static char chooseLetter() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose Letter X or O");
-        return sc.next().charAt(0);
+        return sc.next().toUpperCase().charAt(0);
     }
     static void showBoard(char[]board){
             System.out.println(board[1] + " | " + board[2] + " | " + board[3]);
